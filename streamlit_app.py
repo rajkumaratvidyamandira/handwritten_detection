@@ -1,6 +1,12 @@
-import streamlit as st
 
-st.title("🎈 My new app")
-st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
-)
+import streamlit as st
+import alphabet
+import digit
+
+st.sidebar.title("Navigation")
+page = st.sidebar.radio("",["Alphabet Detection", "Digit Detection"])
+
+if page == "Alphabet Detection":
+    alphabet.app()
+elif page == "Digit Detection":
+    digit.app()
